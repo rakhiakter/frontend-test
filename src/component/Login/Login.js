@@ -6,7 +6,7 @@ import {login} from "../../auth/authSlice"
 import { useNavigate} from "react-router-dom"
 const Login = () => {
   const dispatch = useDispatch();
-  const auth = useSelector((state) => state.auth.user);
+  const auth = useSelector((state) => state.auth);
  const [username, setUsername] = useState("");
  const [password, setPassword] = useState("");
  const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     console.log ("inside handleSubmit")
     if(username && password) {
-      if (auth.username == username && auth.password == password) {
+      if (auth.user.username == username && auth.user.password == password) {
         dispatch(login());
       navigate("/");
       } else {

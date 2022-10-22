@@ -5,22 +5,16 @@ export const authSlice = createSlice({
   initialState: {
     isAuthenticated: false,
     user: { username: "admin", password: "12345" },
-    loggedIn: false,
   },
   reducers: {
     login: (state) => {
+      console.log(state);
       console.log("login button clicked")
-      state= {
-        ...state,
-        isAuthenticated: true,
-      };
+      state.isAuthenticated = true;
     },
     logout: (state) => {
       console.log("logout done")
-      return {
-        ...state,
-        isAuthenticated: false,
-      };
+      state.isAuthenticated = false;
     },
   },
 });

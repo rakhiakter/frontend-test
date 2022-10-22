@@ -13,19 +13,8 @@ const Header = () => {
     <div>
       <Container>
         <Navbar bg="light" variant="light">
-          <Navbar.Brand href="#home">
-            <Link to="/">
-              <img style={{ width: "120.26px", height: "56px" }} alt="" />
-            </Link>
-          </Navbar.Brand>
-          <Form inline>
-            <FormControl
-              id="search"
-              type="text"
-              placeholder="Search your Destination..."
-              className="mr-sm-2"
-            />
-          </Form>
+          
+       
 
           <Nav className="ml-auto">
             <Link className="nav-link" to="/login">
